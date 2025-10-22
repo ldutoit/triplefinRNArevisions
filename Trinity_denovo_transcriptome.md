@@ -3,20 +3,57 @@
 This file contains the code for making the _de_novo_ transcriptome using the trimmed and quality checked 2x 151 bp pair-end read triplefin data.
 
 ```
-cd /nesi/nobackup/denovosourcefiles
-mkdir scheduler      # make a directory for submitting all of your requests
-cd scheduler
+mkdir /nesi/project/uoo03946/revisions/
+cd /nesi/project/uoo03946/revisions/'
+ln -s 
+
 ```
 
-make a new file, named samples_file.txt (see [samples_file.txt](https://github.com/breanariordan/triplefinRNA/blob/main/samples_file.txt))
+make a new file:
+- samples_fileN.txt (see [samples_file.txt](https://github.com/breanariordan/triplefinRNA/blob/main/samples_fileN.txt))
+- samples_fileL.txt (see [samples_file.txt](https://github.com/breanariordan/triplefinRNA/blob/main/samples_fileL.txt))
 
 To use Trinity to make the _de_novo_ transcriptome, we submitted slurm jobs to the NeSI interface using scripts. The Trinity run was separated into two phases to make it easier and quicker.
 
-# Trinity Phase 1
+# Trinity Phase 1 N
 
 ```
 cd scheduler              # if not already there
-nano trinityslurmp1.sl    # this creates a slurm script you can submit
+nano trinityslurmp1N.sl    # this creates a slurm script you can submit
+```
+Using the nano code will open up a script that you can then input the following commands into...
+
+```
+#!/bin/bash -e
+
+#SBATCH --job-name=trinity-phase1N
+#SBATCH --account=uoo03946
+#SBATCH --time=30:00:00
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=200G
+#SBATCH --hint=nomultithread
+
+# load a trinity module
+module purge
+module load Trinity/2.14.0-gimkl-2022a
+
+# run trinity, stop before phase 2
+srun Trinity --no_distributed_trinity_exec \
+  --CPU ${SLURM_CPUS_PER_TASK} --max_memory 200G \
+  --seqType fq --samples_file samples_fileN.txt --SS_lib_type RF --output RF_trinity_outputN
+```
+
+Once the script is created you can send it away to be run
+```
+sbatch trinityslurmp1N.sl
+```
+
+# Trinity Phase 1 L
+
+```
+cd scheduler              # if not already there
+nano trinityslurmp1L.sl    # this creates a slurm script you can submit
 ```
 Using the nano code will open up a script that you can then input the following commands into...
 
@@ -38,12 +75,12 @@ module load Trinity/2.14.0-gimkl-2022a
 # run trinity, stop before phase 2
 srun Trinity --no_distributed_trinity_exec \
   --CPU ${SLURM_CPUS_PER_TASK} --max_memory 200G \
-  --seqType fq --samples_file samples_file.txt --SS_lib_type RF --output RF_trinity_output
+  --seqType fq --samples_file samples_fileL.txt --SS_lib_type RF --output RF_trinity_outputL
 ```
 
 Once the script is created you can send it away to be run
 ```
-sbatch trinityslurmp1.sl
+sbatch trinityslurmp1L.sl
 ```
 
 # Trinity Phase 2
