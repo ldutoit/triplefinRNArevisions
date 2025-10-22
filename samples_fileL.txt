@@ -1,5 +1,4 @@
-
-22Lbrain  22L4brain  ../Trimmed/AAF5HYNM5-7591-23-49-01_S3_L001_R1_001.fastq.gz  ../Trimmed/AAF5HYNM5-7591-23-49-01_S3_L001_R2_001.fastq.gz
-22Lheart  22L1heart  ../Trimmed/AAF5HYNM5-7591-24-49-01_S4_L001_R1_001.fastq.gz  ../Trimmed/AAF5HYNM5-7591-24-49-01_S4_L001_R2_001.fastq.gz
-10Lbrain  10L2brain  ../Trimmed/AAF5HYNM5-7591-36-49-01_S7_L001_R1_001.fastq.gz  ../Trimmed/AAF5HYNM5-7591-36-49-01_S7_L001_R2_001.fastq.gz
-10Lheart  10L1heart  ../Trimmed/AAF5HYNM5-7591-51-49-01_S8_L001_R1_001.fastq.gz  ../Trimmed/AAF5HYNM5-7591-51-49-01_S8_L001_R2_001.fastq.gz
+22Lbrain  22L4brain  ../denovo_sourcefiles/Trimmed/AAF5HYNM5-7591-23-49-01_S3_L001_R1_001.fastq.gz  ../denovo_sourcefiles/Trimmed/AAF5HYNM5-7591-23-49-01_S3_L001_R2_001.fastq.gz
+22Lheart  22L1heart  ../denovo_sourcefiles/Trimmed/AAF5HYNM5-7591-24-49-01_S4_L001_R1_001.fastq.gz  ../denovo_sourcefiles/Trimmed/AAF5HYNM5-7591-24-49-01_S4_L001_R2_001.fastq.gz
+10Lbrain  10L2brain  ../denovo_sourcefiles/Trimmed/AAF5HYNM5-7591-36-49-01_S7_L001_R1_001.fastq.gz  ../denovo_sourcefiles/Trimmed/AAF5HYNM5-7591-36-49-01_S7_L001_R2_001.fastq.gz
+10Lheart  10L1heart  ../denovo_sourcefiles/Trimmed/AAF5HYNM5-7591-51-49-01_S8_L001_R1_001.fastq.gz  ../denovo_sourcefiles/Trimmed/AAF5HYNM5-7591-51-49-01_S8_L001_R2_001.fastq.gz
