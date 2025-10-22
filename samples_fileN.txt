@@ -1,0 +1,4 @@
+22Nbrain  22N1brain  denovo_sourcefiles/Trimmed/AAF5HYNM5-7591-11-49-01_S1_L001_R1_001.fastq.gz  denovo_sourcefiles/Trimmed/AAF5HYNM5-7591-11-49-01_S1_L001_R2_001.fastq.gz
+22Nheart  22N1heart  denovo_sourcefiles/Trimmed/AAF5HYNM5-7591-16-49-01_S2_L001_R1_001.fastq.gz  denovo_sourcefiles/Trimmed/AAF5HYNM5-7591-16-49-01_S2_L001_R2_001.fastq.gz
+10Nbrain  10N3brain  denovo_sourcefiles/Trimmed/AAF5HYNM5-7591-27-49-01_S5_L001_R1_001.fastq.gz  denovo_sourcefiles/Trimmed/AAF5HYNM5-7591-27-49-01_S5_L001_R2_001.fastq.gz
+10Nheart  10N2heart  denovo_sourcefiles/Trimmed/AAF5HYNM5-7591-31-49-01_S6_L001_R1_001.fastq.gz  denovo_sourcefiles/Trimmed/AAF5HYNM5-7591-31-49-01_S6_L001_R2_001.fastq.gz
