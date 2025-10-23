@@ -83,23 +83,22 @@ Once the script is created you can send it away to be run
 sbatch trinityslurmp1L.sl
 ```
 
-# Trinity Phase 2
+# Trinity Phase 2 N
 
 ```
-nano trinityslurmp2.sl      # generate script
+nano trinityslurmp2N.sl      # generate script
 ```
 
 ```
 #!/bin/bash -e
 
-#SBATCH --job-name=trinity-phase2grid
+#SBATCH --job-name=trinity-phase2gridN
 #SBATCH --account=uoo03946
 #SBATCH --time=30:00:00
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=200G
 #SBATCH --hint=nomultithread
-#SBATCH --partition=bigmem
 
 # load a trinity module
 module purge
@@ -109,11 +108,47 @@ module load HpcGridRunner/20210803
 # run Trinity phase 2
 srun Trinity --CPU ${SLURM_CPUS_PER_TASK} --max_memory 200G \
   --grid_exec "hpc_cmds_GridRunner.pl --grid_conf ${SLURM_SUBMIT_DIR}/SLURM.conf -c" \
-  --seqType fq --samples_file samples_file.txt --SS_lib_type RF --output RF_trinity_output
+  --seqType fq --samples_file samples_fileN.txt --SS_lib_type RF --output RF_trinity_outputN
 ```
 
 ```
-sbatch trinityslurmp2.sl    # send script away to be run
+sbatch trinityslurmp2N.sl    # send script away to be run
 ```
 
 After this, the next step is to obtain the iscountmatrix. The code for this can be found at [Obtaining_iscount_matrix](https://github.com/breanariordan/triplefinRNA/blob/main/Obtaining_iscount_matrix.md)
+
+# Trinity Phase 2 L
+
+```
+nano trinityslurmp2L.sl      # generate script
+```
+
+```
+#!/bin/bash -e
+
+#SBATCH --job-name=trinity-phase2gridL
+#SBATCH --account=uoo03946
+#SBATCH --time=30:00:00
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=200G
+#SBATCH --hint=nomultithread
+
+# load a trinity module
+module purge
+module load Trinity/2.14.0-gimkl-2022a
+module load HpcGridRunner/20210803
+
+# run Trinity phase 2
+srun Trinity --CPU ${SLURM_CPUS_PER_TASK} --max_memory 200G \
+  --grid_exec "hpc_cmds_GridRunner.pl --grid_conf ${SLURM_SUBMIT_DIR}/SLURM.conf -c" \
+  --seqType fq --samples_file samples_fileL.txt --SS_lib_type RF --output RF_trinity_outputL
+```
+
+```
+sbatch trinityslurmp2L.sl    # send script away to be run
+```
+
+After this, the next step is to obtain the iscountmatrix. The code for this can be found at [Obtaining_iscount_matrix](https://github.com/breanariordan/triplefinRNA/blob/main/Obtaining_iscount_matrix.md)
+
+Th
