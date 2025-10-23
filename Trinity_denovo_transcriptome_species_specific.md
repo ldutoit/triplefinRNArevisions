@@ -151,4 +151,3 @@ sbatch trinityslurmp2L.sl    # send script away to be run
 
 After this, the next step is to obtain the iscountmatrix. The code for this can be found at [Obtaining_iscount_matrix](https://github.com/breanariordan/triplefinRNA/blob/main/Obtaining_iscount_matrix.md)
 
-Th
