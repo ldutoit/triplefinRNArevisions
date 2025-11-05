@@ -1,3 +1,7 @@
+## NextFlow pipeline
+
+It runs here:
+
 ```
 cd /nesi/nobackup/uoo03946/revisions
 ```
@@ -15,14 +19,16 @@ profiles {
     }
 }
 ```
-run trinitynfrun.sh
+and the batch file trinitynfrun.sh.
 
 ```
 #!/bin/sh
-module load Nextflow fastp FastQC Trinity Java/17
-nextflow run nf-core/denovotranscript --input samples_filenfL.csv --outdir RF_trininity_nfL -r main -profile myslurm
+module purge
+module load SAMtools Nextflow fastp FastQC Trinity Java/17 
+nextflow run nf-core/denovotranscript --input samples_filenfL.csv --outdir RF_trinity_nfL  --assemblers trinity -r main -profile myslurm -resume
 ```
 
+Run the pipeline using:
 ```
- sbatch -A uoo00116 -t 2-00:00:00 -c 1 --mem 1G trinitynfrun.sh
+sbatch -A uoo00116 -t 2-00:00:00 -c 24 --mem 72G trinitynfrun.sh
 ```
