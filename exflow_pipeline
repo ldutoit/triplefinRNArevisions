@@ -1,3 +1,0 @@
-cd /nesi/nobackup/uoo03946/revisions
-module load Nextflow fastp FastQC Trinity Java/17
-nextflow run nf-core/denovotranscript --input samples_filenfL.csv --outdir RF_trininity_nfL -r main
