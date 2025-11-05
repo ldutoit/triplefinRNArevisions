@@ -20,7 +20,7 @@ run trinitynfrun.sh
 ```
 #!/bin/sh
 module load Nextflow fastp FastQC Trinity Java/17
-nextflow run nf-core/denovotranscript --input samples_filenfL.csv --outdir RF_trininity_nfL -r main --profile myslurm
+nextflow run nf-core/denovotranscript --input samples_filenfL.csv --outdir RF_trininity_nfL -r main -profile myslurm
 ```
 
 ```
