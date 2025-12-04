@@ -12,6 +12,9 @@ cp /nesi/project/uoo03946/denovo_transcriptome/RF_trinity_output.Trinity.fasta .
 
 remap both species to each assemblies...
 
+/Obtaining_iscount_matrix.md
+
+
 ## rnaQUAST
 
 
