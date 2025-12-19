@@ -62,3 +62,26 @@ cd ../MultiQC
 cp ../Trimmed/*log .          # take all the trimmed .log files
 multiqc .                     # and run the multiqc again
 ```
+```
+# /home/ludovic.dutoit/revisions/OG7591-691868198/sourcefiles/Trimmed
+
+#concatenate them
+	mkdir -p concatenated_fastq
+
+	for s in $(seq 1 52); do
+	    s_tag="S${s}"
+	    
+	    files=$(ls *_${s_tag}_L001_R1_001.trimmed.fastq.gz 2>/dev/null)
+	    
+	    if [ $(echo "$files" | wc -l) -eq 2 ]; then
+	        out="concatenated_fastq/${s_tag}_L001_R1.trimmed.fastq.gz"
+	        zcat $files > "$out"
+	        echo "Concatenated $s_tag"
+	    else
+	        echo "Skipping $s_tag (found $(echo "$files" | wc -l) files)"
+	    fi
+	done
+```
+
+Renaming to be done
+
