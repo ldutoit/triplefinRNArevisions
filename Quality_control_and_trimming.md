@@ -52,6 +52,12 @@ for filename in run/*fastq.gz
     base=$(basename ${filename} .fastq.gz)
     cutadapt -q 20 -a AGATCGGAAGAG -o Trimmed/${base}.trimmed.fastq.gz ${filename} > Trimmed/${base}.log
     done
+for filename in rerun/*fastq.gz
+    do
+    base=$(basename ${filename} .fastq.gz)
+    cutadapt -j 2 -q 20 -a AGATCGGAAGAG -o Trimmed/${base}.trimmed.fastq.gz ${filename} > Trimmed/${base}.log
+    done
+
 cd ../MultiQC
 cp ../Trimmed/*log .          # take all the trimmed .log files
 multiqc .                     # and run the multiqc again
