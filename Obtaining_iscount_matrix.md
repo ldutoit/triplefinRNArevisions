@@ -11,7 +11,8 @@ cd nobackup/denovosourcefiles/scheduler/
 # Obtaining the iscountmatrix
 
 ```
-cp -r /home/ludovic.dutoit/revisions/OG7591-691868198/sourcefiles/Trimmed/concatenated_fastq /home/ludovic.dutoit/revisions/comparing_assemblies
+ln -s /home/ludovic.dutoit/revisions/OG7591-691868198/sourcefiles/Trimmed/concatenated_fastq .
+```
 ```
 nano iscountmatrix_hybrid.sl    # create slurm script
 ```
