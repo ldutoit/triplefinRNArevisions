@@ -21,7 +21,6 @@ The following should be input as a slurm script
 
 ```
 #!/bin/bash -e
-
 #SBATCH --job-name=trinity-iscountmatrix
 #SBATCH --account=uoo03946
 #SBATCH --time=7:00:00
@@ -29,20 +28,15 @@ The following should be input as a slurm script
 #SBATCH --ntasks=1
 #SBATCH --mem=64G
 #SBATCH --hint=nomultithread
-
 # user specific environment
-
 module purge
+module load RSEM
 module load Trinity/2.14.0-gimkl-2022a
 module load Miniconda3
-module load Perl/5.38.2-GCC-12.3.0
 module load SAMtools/1.16.1-GCC-11.3.0
-module load Bowtie/1.3.1-GCC-11.3.0
-module load RSEM/1.3.3-gimkl-2022a
-
+module load Bowtie2
 # Trinity command
-
-srun perl /opt/nesi/CS400_centos7_bdw/Trinity/2.14.0-gimkl-2022a/trinityrnaseq-v2.14.0/util/align_and_estimate_abundance.pl \
+ perl /opt/nesi/CS400_centos7_bdw/Trinity/2.14.0-gimkl-2022a/trinityrnaseq-v2.14.0/util/align_and_estimate_abundance.pl \
   --transcripts RF_trinity_output.Trinity.fasta \
   --seqType fq \
   --samples_file samples_file_small.txt \
