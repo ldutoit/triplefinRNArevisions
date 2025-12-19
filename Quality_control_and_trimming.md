@@ -14,6 +14,7 @@ cd ..                     # move back to nobackup directory
 tar xvf OG7591-39750650.tar
 
 cp Desktop/OG7591-397506150/OG7591-691868198/*/*gz sourcefiles/run/
+cp Desktop/OG7591-397506150/OG7591_re-run-694316623/*/*gz sourcefiles/rerun/
 ```
 
 # Quality control
@@ -43,15 +44,13 @@ if fastqc and multiqc results indicate it is needed
 this will use the cutadapt programme to trim low quality reads out of the files and put them into a new folder called 'Trimmed'
 
 ```
-pwd
-cd ..                         # move back to sourcefiles directory
+cd /home/ludovic.dutoit/revisions/OG7591-691868198/sourcefiles
 mkdir Trimmed                 # make directory 'Trimmed'
 module load cutadapt/4.1-gimkl-2022a-Python-3.10.5    # load latest cutadapt version
-cd run                        # go to the raw data folder
-for filename in *fastq.gz
+for filename in run/*fastq.gz
     do
     base=$(basename ${filename} .fastq.gz)
-    cutadapt -q 20 -a AGATCGGAAGAG -o ../Trimmed/${base}.trimmed.fastq.gz ${filename} > ../Trimmed/${base}.log
+    cutadapt -q 20 -a AGATCGGAAGAG -o Trimmed/${base}.trimmed.fastq.gz ${filename} > Trimmed/${base}.log
     done
 cd ../MultiQC
 cp ../Trimmed/*log .          # take all the trimmed .log files
