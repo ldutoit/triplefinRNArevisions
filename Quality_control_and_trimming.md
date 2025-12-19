@@ -74,7 +74,7 @@ multiqc .                     # and run the multiqc again
 	    files=$(ls *_${s_tag}_L001_R1_001.trimmed.fastq.gz 2>/dev/null)
 	    
 	    if [ $(echo "$files" | wc -l) -eq 2 ]; then
-	        out="concatenated_fastq/${s_tag}_L001_R1.trimmed.fastq.gz"
+	        out="concatenated_fastq/${s_tag}_L001_R1.trimmed.fastq"
 	        zcat $files > "$out"
 	        echo "Concatenated $s_tag"
 	    else
