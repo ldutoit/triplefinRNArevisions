@@ -83,6 +83,61 @@ multiqc .                     # and run the multiqc again
 	done
 ```
 
-Renaming to be done
 
-Stuff to compare species specific mapping rate to each transcriptome.
+Renaming
+
+```
+mv S1_L001_R1.trimmed.fastq	LR05.fastq
+mv S2_L001_R1.trimmed.fastq	LR07.fastq
+mv S3_L001_R1.trimmed.fastq	LR08.fastq
+mv S4_L001_R1.trimmed.fastq	LI06.fastq
+mv S5_L001_R1.trimmed.fastq	LI07.fastq
+mv S6_L001_R1.trimmed.fastq	LI08.fastq
+mv S7_L001_R1.trimmed.fastq	LR11.fastq
+mv S8_L001_R1.trimmed.fastq	LI09.fastq
+mv S9_L001_R1.trimmed.fastq	LI11.fastq
+mv S10_L001_R1.trimmed.fastq	LI16.fastq
+mv S11_L001_R1.trimmed.fastq	22_N1_brain.fastq
+mv S12_L001_R1.trimmed.fastq	22_N2_brain.fastq
+mv S13_L001_R1.trimmed.fastq	22_N3_brain.fastq
+mv S14_L001_R1.trimmed.fastq	22_N4_brain.fastq
+mv S15_L001_R1.trimmed.fastq	22_N5_brain.fastq
+mv S16_L001_R1.trimmed.fastq	22_N1_heart.fastq
+mv S17_L001_R1.trimmed.fastq	22_N2_heart.fastq
+mv S18_L001_R1.trimmed.fastq	22_N3_heart.fastq
+mv S19_L001_R1.trimmed.fastq	22_N4_heart.fastq
+mv S20_L001_R1.trimmed.fastq	22_N5_heart.fastq
+mv S21_L001_R1.trimmed.fastq	22_L1_brain.fastq
+mv S22_L001_R1.trimmed.fastq	22_L2_brain.fastq
+mv S23_L001_R1.trimmed.fastq	22_L4_brain.fastq
+mv S24_L001_R1.trimmed.fastq	22_L1_heart.fastq
+mv S25_L001_R1.trimmed.fastq	10_N1_brain.fastq
+mv S26_L001_R1.trimmed.fastq	10_N2_brain.fastq
+mv S27_L001_R1.trimmed.fastq	10_N3_brain.fastq
+mv S28_L001_R1.trimmed.fastq	10_N4_brain.fastq
+mv S29_L001_R1.trimmed.fastq	10_N5_brain.fastq
+mv S30_L001_R1.trimmed.fastq	10_N1_heart.fastq
+mv S31_L001_R1.trimmed.fastq	10_N2_heart.fastq
+mv S32_L001_R1.trimmed.fastq	10_N3_heart.fastq
+mv S33_L001_R1.trimmed.fastq	10_N4_heart.fastq
+mv S34_L001_R1.trimmed.fastq	10_N5_heart.fastq
+mv S35_L001_R1.trimmed.fastq	10_L1_brain.fastq
+mv S36_L001_R1.trimmed.fastq	10_L2_brain.fastq
+mv S37_L001_R1.trimmed.fastq	10_L4_brain.fastq
+mv S38_L001_R1.trimmed.fastq	10_L5_brain.fastq
+mv S39_L001_R1.trimmed.fastq	10_L2_heart.fastq
+mv S40_L001_R1.trimmed.fastq	10_L3_heart.fastq
+mv S41_L001_R1.trimmed.fastq	10_L5_heart.fastq
+mv S42_L001_R1.trimmed.fastq	LR10.fastq
+mv S43_L001_R1.trimmed.fastq	LR12.fastq
+mv S44_L001_R1.trimmed.fastq	22_L3_brain.fastq
+mv S45_L001_R1.trimmed.fastq	22_L5_brain.fastq
+mv S46_L001_R1.trimmed.fastq	22_L2_heart.fastq
+mv S47_L001_R1.trimmed.fastq	22_L3_heart.fastq
+mv S48_L001_R1.trimmed.fastq	22_L4_heart.fastq
+mv S49_L001_R1.trimmed.fastq	22_L5_heart.fastq
+mv S50_L001_R1.trimmed.fastq	10_L3_brain.fastq
+mv S51_L001_R1.trimmed.fastq	10_L1_heart.fastq
+mv S52_L001_R1.trimmed.fastq	10_L4_heart.fastq
+```
+
