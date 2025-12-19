@@ -11,7 +11,9 @@ cd nobackup/denovosourcefiles/scheduler/
 # Obtaining the iscountmatrix
 
 ```
-nano iscountmatrix.sl    # create slurm script
+cp -r /home/ludovic.dutoit/revisions/OG7591-691868198/sourcefiles/Trimmed/concatenated_fastq /home/ludovic.dutoit/revisions/comparing_assemblies
+```
+nano iscountmatrix_hybrid.sl    # create slurm script
 ```
 
 The following should be input as a slurm script
@@ -47,7 +49,7 @@ srun perl /opt/nesi/CS400_centos7_bdw/Trinity/2.14.0-gimkl-2022a/trinityrnaseq-v
   --trinity_mode \
   --prep_reference \
   --thread_count 16 \
-  --coordsort_bam > bowtie-rsem_align_and_estimate_abundance.log
+  --coordsort_bam > bowtie-rsem_align_and_estimate_abundance_hybrid.log
 ```
 
 ```
