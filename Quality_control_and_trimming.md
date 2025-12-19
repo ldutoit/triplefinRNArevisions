@@ -9,8 +9,11 @@ cd ../nobackup            # move back to nobackup folder
 mkdir sourcefiles         # make a new directory called 'sourcefiles'
 cd sourcefiles
 mkdir run                 # make a new directory for the raw reads
+mkdir re-run
 cd ..                     # move back to nobackup directory
-cp ../OG7591-691868198/AA*/*gz sourcefiles/run/ # take all the files containing the letters/numbers in the asterix and copy them into the new run directory
+tar xvf OG7591-39750650.tar
+
+cp Desktop/OG7591-397506150/OG7591-691868198/*/*gz sourcefiles/run/
 ```
 
 # Quality control
