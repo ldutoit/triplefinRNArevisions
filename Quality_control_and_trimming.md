@@ -85,3 +85,4 @@ multiqc .                     # and run the multiqc again
 
 Renaming to be done
 
+Stuff to compare species specific mapping rate to each transcriptome.
