@@ -36,3 +36,5 @@
 22N4heart  22N4heart  concatenated_fastq/22_N4_heart.fastq
 22N5brain  22N5brain  concatenated_fastq/22_N5_brain.fastq
 22N5heart  22N5heart  concatenated_fastq/22_N5_heart.fastq
+10L1heart  10L1heart  concatenated_fastq/10_L1_heart.fastq
+10L2brain  10L2brain  concatenated_fastq/10_L2_brain.fastq
