@@ -25,6 +25,6 @@ The gene counts are:
 [RSEM_gene_counts_L.txt](RSEM_gene_counts_L.txt): gene counts from scratch on lapillum transcriptome  assembly
 [RSEM_gene_counts_N.txt](RSEM_gene_counts_N.txt): gene counts from scratch on nigripenne transcriptome  assembly
 
-I also ran OrthoFinder in [orthofinder.md](orthofinder.md) between two or three assemblies to be able to do species specific assemblies.
+I also ran OrthoFinder in [orthofinder.md](orthofinder.md) between two and three assemblies (2 separate runs) to be able to do species specific assemblies. Important files are mentioned at the end of the script, the folder is also backed up at /nesi/project/uoo00116/Breana/.
 
 Finally,DE Analysis for the brain of lapillum only, but on all three transcriptomes (original hybrid transcriptome  one with both gene counts matrix) is in [DE_Analysis_brain_lapillum](DE_Analysis_brain_lapillum).
