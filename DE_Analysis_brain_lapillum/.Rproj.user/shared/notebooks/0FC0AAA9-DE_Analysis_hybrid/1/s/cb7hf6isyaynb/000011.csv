@@ -1,0 +1,2 @@
+"0","# visualising clustering of samples"
+"0","plotMDS(v, pch = 19, col = rep(c( ""#377EB8"",""#E41A1C""), each = 5), cex = 2, frame = F, main = """", cex.axis = 1)"

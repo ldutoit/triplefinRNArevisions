@@ -1,0 +1,5 @@
+"0","# changing column names
+original=read.csv(""RSEM_gene_counts_hybrid.txt"", sep="""", head=T)
+"
+"2","Error in file(file, ""rt"") : cannot open the connection
+"

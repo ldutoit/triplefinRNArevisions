@@ -1,0 +1,64 @@
+---
+title: "comparing_submission_vs_new_with_hybrid_assembly"
+output: html_document
+date: "2025-12-23"
+---
+
+After re-running the pipeline, results are slightly different. let's look at how.
+
+```{r}
+library(tidyr)
+library(DESeq2)
+library(pheatmap)
+library(stringr)
+library(ggplot2)
+library(dplyr)
+library(matrixStats)
+library(edgeR)
+library(grid)
+library("RColorBrewer")
+library(ggrepel)
+```
+
+read Breana's file
+```{r}
+# changing column names
+original=read.csv("RSEM_gene_counts.txt", sep="", head=T)
+head(original)
+rownames(original)<-original[,1]
+original<-original[,-1]
+
+colnames(original) <- c ("10L1brain", "10L1heart", "10L2brain", "10L2heart", "10L3brain", "10L3heart", "10L4brain", "10L4heart", "10L5brain", "10L5heart", "10N1brain", "10N1heart", "10N2brain", "10N2heart", "10N3brain","10N3heart", "10N4brain", "10N4heart", "10N5brain", "10N5heart", "22L1brain", "22L1heart", "22L2brain", "22L2heart", "22L3brain", "22L3heart", "22L4brain", "22L4heart", "22L5brain", "22L5heart", "22N1brain", "22N1heart", "22N2brain", "22N2heart", "22N3brain", "22N3heart", "22N4brain", "22N4heart", "22N5brain", "22N5heart")
+original_submission<-original
+```
+
+Read mine:
+
+```{r}
+# changing column names
+original=read.csv("RSEM_gene_counts_hybrid.txt", sep="", head=T)
+head(original)
+#rownames(original)<-original[,1]
+#original<-original[,-1]
+
+colnames(original) <- c ("10L1brain", "10L1heart", "10L2brain", "10L2heart", "10L3brain", "10L3heart", "10L4brain", "10L4heart", "10L5brain", "10L5heart", "10N1brain", "10N1heart", "10N2brain", "10N2heart", "10N3brain","10N3heart", "10N4brain", "10N4heart", "10N5brain", "10N5heart", "22L1brain", "22L1heart", "22L2brain", "22L2heart", "22L3brain", "22L3heart", "22L4brain", "22L4heart", "22L5brain", "22L5heart", "22N1brain", "22N1heart", "22N2brain", "22N2heart", "22N3brain", "22N3heart", "22N4brain", "22N4heart", "22N5brain", "22N5heart")
+
+rerun_ludo<-original
+
+
+```
+
+
+comparing total reads:
+
+```{r}
+apply(original_submission,2,sum)
+apply(rerun_ludo,2,sum)
+apply(original_submission,2,sum)-apply(rerun_ludo,2,sum)
+```
+Minuscule variation, except for 10L2brain (7591-**36**-49-1).It looks like in Breana's case, 10L2Brain was not concatenated. I excluded that I concatenated twice by rerunning the concatenation and checking output size
+
+That is the main difference between the two runs. The minor variation is weird but it could come from trinity itself. One could simply run it with the half of data for 10L2 brain that Breana got (once we figure which one that is) if we wanted to keep going with that analysis.
+
+    
+

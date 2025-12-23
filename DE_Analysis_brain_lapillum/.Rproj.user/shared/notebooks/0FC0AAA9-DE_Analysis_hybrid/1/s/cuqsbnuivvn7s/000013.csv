@@ -1,0 +1,6 @@
+"0","write.table(rownames(DE_results) [which(DE_results$logFC<0)], ""GOlapbrain_downregulated.txt"", row.names=F, col.names=F, quote=F)
+"
+"2","Error: unexpected symbol in:
+""
+write.table""
+"

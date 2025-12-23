@@ -1,0 +1,4 @@
+"0","logCPM <- cpm(dge, log=TRUE)"
+"0","design <- model.matrix(~sampleslapbrain$treatment)"
+"0",""
+"0","v <- voom(dge, design, plot=TRUE, normalize=""quantile"")"
