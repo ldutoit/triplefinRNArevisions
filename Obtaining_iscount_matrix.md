@@ -111,3 +111,8 @@ colnames(txi_rsem$counts) <- gsub(".txt","",files)
 head(txi_rsem$counts)
 write.table(txi_rsem$counts, "RSEM_gene_counts.txt", row.names=T, col.names=T, sep="\t")
 ```
+This is then replicated to obtain within /nesi/nobackup/uoo03946/revisions/comparing_assemblies:
+
+```
+RSEM_gene_counts_hybrid.txt  RSEM_gene_counts_L.txt  RSEM_gene_counts_N.txt
+```
