@@ -43,4 +43,10 @@ module load OrthoFinder
 orthofinder -f orthofinder_run/
 ```
 
-the results we want is what is in OrthoGroups/Orthogroups_single_orthologous.., those have all the groups where we have one group per species.
+The results are in: /home/ludovic.dutoit/revisions/comparing_assemblies/orthofinder_run/OrthoFinder/Results_Dec23_1/Orthogroups
+
+with:
+
+Orthogroups_SingleCopyOrthologues.txt listing signle copy orthogroups that can be extracted from Orthogroups.txt.
+
+In a final clean analysis, this is rn only on two species. That analysis already exist in /home/ludovic.dutoit/revisions/comparing_assemblies/orthofinder_run_2species 
